@@ -43,7 +43,12 @@ form: FormGroup;
     this.toastr.success('La Tarjeta fue Registrata con Exito.!', 'Tarjeta Registrada!');
     this.form.reset();
     //console.log(tarjeta);
-
   }
+
+  eliminarTarjeta(index:number){
+        // console.log(index)
+        this.listarTarjetas.splice(index, 1);
+        this.toastr.error("Tarjeta Eliminada con Exito!","Tarjeta Eliminada.");
+  };
 
 }
